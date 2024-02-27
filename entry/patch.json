@@ -1,0 +1,11 @@
+{
+  "app": {
+    "bundleName": "cn.mfacode.mfa",
+    "patchVersionCode": 2000055,
+    "versionCode": 1000000
+  },
+  "module": {
+    "name": "entry",
+    "type": "hotreload"
+  }
+}

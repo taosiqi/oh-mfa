@@ -15,6 +15,10 @@
     {
       "name": "click_me",
       "value": " 点击 "
+    },
+    {
+      "name": "reason",
+      "value": " 申请网络权限 "
     }
   ]
 }

@@ -15,6 +15,10 @@
     {
       "name": "click_me",
       "value": " Click me "
+    },
+    {
+      "name": "reason",
+      "value": "Apply for network permission"
     }
   ]
 }

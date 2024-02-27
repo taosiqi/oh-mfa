@@ -27,20 +27,32 @@
           "signAlg": "SHA256withECDSA",
           "storeFile": "/Users/taosiqi/.ohos/config/openharmony/auto_ohos_default_oh-mfa_cn.mfacode.mfa.p12"
         }
+      },
+      {
+        "name": "debug_default",
+        "material": {
+          "certpath": "/Users/taosiqi/.ohos/config/openharmony/auto_ohos_debug_default_oh-mfa_cn.mfacode.mfa.cer",
+          "storePassword": "0000001AA42F449AED2E5ED22EF21DED7FF02A0626B6F1DE88B93BBFD2CBC072ABDD30C06C7D95266645",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001A77A433A67FF7B371D74993DF38A917C212AC95FF32F87CCC44AE7D64E46540BD9667E3EA59E1",
+          "profile": "/Users/taosiqi/.ohos/config/openharmony/auto_ohos_debug_default_oh-mfa_cn.mfacode.mfa.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/taosiqi/.ohos/config/openharmony/auto_ohos_debug_default_oh-mfa_cn.mfacode.mfa.p12"
+        }
       }
     ],
     "products": [
       {
         "name": "default",
-        "signingConfig": "default",
+        "signingConfig": "debug_default",
         "compileSdkVersion": 10,
         "compatibleSdkVersion": 10,
-        "runtimeOS": "OpenHarmony",
+        "runtimeOS": "OpenHarmony"
       }
     ],
     "buildModeSet": [
       {
-        "name": "debug",
+        "name": "debug"
       },
       {
         "name": "release"
