@@ -1,7 +1,7 @@
 {
   "app": {
     "bundleName": "cn.mfacode.mfa",
-    "patchVersionCode": 2000065,
+    "patchVersionCode": 2000068,
     "versionCode": 1000000
   },
   "module": {
