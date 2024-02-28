@@ -8,7 +8,7 @@ totp-generator 允许你从一个TOTP密钥生成TOTP令牌
 <img height="200" src="https://static-1253419794.cos.ap-nanjing.myqcloud.com/img/code.jpg" width="200"/>
 
 ## 如何使用
-
+项目基于openharmony api10 开发
 ```javascript
 import { generateTotp } from 'totp-generator'
 
