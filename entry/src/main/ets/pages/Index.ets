@@ -1,3 +1,5 @@
+import { generateTotp } from 'totp-generator'
+
 @Entry
 @Component
 struct Index {
@@ -9,6 +11,7 @@ struct Index {
       Column({ space: 15 }) {
         Banner().height(200)
         Text('倒计时 30s')
+        Text(generateTotp('5F7XTR3O5ANHF4UI'))
         ForEach(this.numList, (item) => {
           Text('item-' + item)
             .width('100%')

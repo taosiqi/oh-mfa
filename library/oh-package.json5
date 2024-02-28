@@ -1,0 +1,31 @@
+{
+  "name": "totp-generator",
+  "types": "",
+  "keywords": [
+    "HarmonyOS",
+    "totp",
+    "generator",
+    "auth",
+    "authentication",
+    "google authenticator",
+    "oath",
+    "2-factor",
+    "two-factor",
+    "mfa"
+  ],
+  "author": "taosiqi",
+  "description": "从密钥生成TOTP验证码 Generate TOTP tokens from key ",
+  "main": "index.ets",
+  "repository": "https://github.com/taosiqi/oh-mfa.git",
+  "type": "module",
+  "version": "0.0.2",
+  "tags": [
+    "Tools",
+    "Security"
+  ],
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "@ohos/crypto-js": "^2.0.3"
+  }
+}
