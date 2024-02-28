@@ -2,6 +2,11 @@
 
 totp-generator 允许你从一个TOTP密钥生成TOTP令牌
 
+## 前言
+推荐使用《MFA二次验证码》微信小程序版本，完美兼容 GoogleAuthenticator的二次验证器， 终身免费的云服务使您远离丢失数据的烦恼。
+使用微信扫码即可使用  
+<img height="200" src="https://static-1253419794.cos.ap-nanjing.myqcloud.com/img/code.jpg" width="200"/>
+
 ## 如何使用
 
 ```javascript
