@@ -3,54 +3,41 @@ import { generateTotp } from 'totp-generator'
 @Entry
 @Component
 struct Index {
-  @State numList: Array<number> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-  scroller: Scroller = new Scroller()
+  @State totpKey: string = '5F7XTR3O5ANHF4UI'
+  @State genTotpKey: string = ''
+  @State second: number = 30
+  intervalID: number
 
-  build() {
-    Scroll(this.scroller) {
-      Column({ space: 15 }) {
-        Banner().height(200)
-        Text('倒计时 30s')
-        Text(generateTotp('5F7XTR3O5ANHF4UI'))
-        ForEach(this.numList, (item) => {
-          Text('item-' + item)
-            .width('100%')
-            .height(120)
-            .fontSize(16)
-            .textAlign(TextAlign.Center)
-            .borderRadius(10)
-            .backgroundColor(Color.Grey)
-        }, item => item)
-      }.alignItems(HorizontalAlign.Start)
-    }
-    .padding({ left: 10, right: 10,bottom:30 })
-    .scrollable(ScrollDirection.Vertical)
-    .edgeEffect(EdgeEffect.Fade)
-    .onScroll((xOffset: number, yOffset: number) => {
-      console.info(xOffset + ' ' + yOffset)
-    })
+  countdown() {
+    this.intervalID = setInterval(() => {
+      this.second= 30 - (new Date().getSeconds() % 30)
+      if(this.second===30){
+        this.genTotpKey=generateTotp(this.totpKey)
+      }
+    }, 1000);
+  };
+
+
+  async onPageShow(){
+    this.genTotpKey=generateTotp(this.totpKey)
+    this.countdown()
   }
-}
-
-
-@Component
-struct Banner {
-  private swiperController: SwiperController = new SwiperController()
 
   build() {
-    Swiper(this.swiperController) {
-      ForEach([1, 2, 4], () => {
-        Image("https://static-1253419794.cos.ap-nanjing.myqcloud.com/img/1.png")
-          .width('100%')
-          .height('100%')
-          .objectFit(ImageFit.Cover)
+    Column({ space: 15 }) {
+      Text(`倒计时${this.second}s`).fontSize(28)
+      Text(this.genTotpKey).fontSize(40)
+      TextInput({ text: this.totpKey, placeholder: 'input your word...' }).onChange((value)=>{
+        this.totpKey=value
+      }).width(300).defaultFocus(true)
+      Button('刷新验证码').onClick(()=>{
+        this.genTotpKey=generateTotp(this.totpKey)
       })
-    }
-    .height('100%')
-    .width('100%')
-    .borderRadius(8)
-    .loop(true)
-    .autoPlay(true)
+    }.justifyContent(FlexAlign.Center).width('100%').height('100%')
   }
 }
+
+
+
+
 
