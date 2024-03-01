@@ -3,12 +3,19 @@
 totp-generator 允许你从一个TOTP密钥生成TOTP令牌
 
 ## 前言
+项目基于openharmony api10 开发  
 推荐使用《MFA二次验证码》微信小程序版本，完美兼容 GoogleAuthenticator的二次验证器， 终身免费的云服务使您远离丢失数据的烦恼。
 使用微信扫码即可使用  
 <img height="200" src="https://static-1253419794.cos.ap-nanjing.myqcloud.com/img/code.jpg" width="200"/>
 
-## 如何使用
-项目基于openharmony api10 开发  
+## 安装命令
+
+```bash
+ohpm install totp-generator
+```
+
+## 使用说明
+
 ```javascript
 import { generateTotp } from 'totp-generator'
 
@@ -42,10 +49,10 @@ const token = generateTotp("JBSWY3DPEHPK3PXP", { timestamp: 1465324707000 });
 console.log(token); // prints a token for given time
 
 const token = generateTotp("JBSWY3DPEHPK3PXP", {
-	digits: 8,
-	algorithm: "SHA512",
-	period: 60,
-	timestamp: 1465324707000,
+    digits: 8,
+    algorithm: "SHA512",
+    period: 60,
+    timestamp: 1465324707000,
 });
 console.log(token); // prints a token using all custom settings combined
 ```
