@@ -18,7 +18,7 @@
   "main": "index.ets",
   "repository": "https://github.com/taosiqi/oh-mfa.git",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "tags": [
     "Tools",
     "Security"
