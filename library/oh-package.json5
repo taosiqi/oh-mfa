@@ -17,8 +17,9 @@
   "description": "从密钥生成TOTP验证码 Generate TOTP tokens from key ",
   "main": "index.ets",
   "repository": "https://github.com/taosiqi/oh-mfa.git",
+  "homepage": "https://mfacode.cn",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "tags": [
     "Tools",
     "Security"

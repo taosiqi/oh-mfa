@@ -8,6 +8,9 @@ totp-generator 允许你从一个TOTP密钥生成TOTP令牌
 使用微信扫码即可使用  
 <img height="200" src="https://static-1253419794.cos.ap-nanjing.myqcloud.com/img/code.jpg" width="200"/>
 
+## 仓库地址
+欢迎 Star，项目的发展离不开你的鼓励  
+https://github.com/taosiqi/oh-mfa.git 
 ## 安装命令
 
 ```bash
